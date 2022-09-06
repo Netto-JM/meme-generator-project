@@ -9,10 +9,23 @@
 </head>
 <body>
   <header><h1>Meme Generator</h1></header>
-  <input type="text" id="text-input">
+  <label for="text-input">Texto: </label>
+  <input type="text" id="text-input"><br>
+  <label for="meme-insert">Foto: </label>
+  <input type="file" id="meme-insert">
+  
   <div id="meme-image-container">
     <p id="meme-text"></p>
+    <img src="" alt="" id="meme-image">
   </div>
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+<!-- <form action="/action_page.php">
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit">
+</form> -->
