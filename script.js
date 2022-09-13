@@ -36,8 +36,8 @@ function useMemePreview(event) {
   const clickedImg = event.target.closest('img');
   const clickedWhiteSpace = !clickedImg;
   if (clickedWhiteSpace) return;
-  const memePreviewSrc = clickedImg.src.slice(-14);
-  const memePreviousSrc = memeImageContainerEl.src.slice(-14);
+  const memePreviewSrc = clickedImg.src;
+  const memePreviousSrc = memeImageContainerEl.src;
   if (memePreviewSrc === memePreviousSrc) return;
   memeImageContainerEl.src = memePreviewSrc;
 }
