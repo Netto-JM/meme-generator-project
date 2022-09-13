@@ -9,6 +9,13 @@ p {
   font-size: 30px;
 }
 
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 #meme-image-container {
   width: 300px;
   height: 250px;
@@ -16,6 +23,7 @@ p {
   background: white;
   margin: auto;
   padding: 15px 10px;
+  margin-bottom: 1rem;
 }
 
 #meme-image {
@@ -39,4 +47,8 @@ p {
 
 #earth {
   background-color: green;
+}
+
+#preview-images img {
+  width: 100px;
 }
