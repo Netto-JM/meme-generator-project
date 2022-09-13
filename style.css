@@ -3,13 +3,28 @@ h1 {
 }
 
 p {
-  position: relative;
   z-index: 2;
-  top: 0px;
+  top: 300px;
   left: 10px;
+  font-size: 30px;
+}
+
+#meme-image-container {
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  background: white;
+  margin: auto;
+  padding: 15px 10px;
 }
 
 #meme-image {
-  height: 400px;
-  width: 500px;
+  width: 90%;
+  height: 90%;
+}
+
+#meme-text {
+  text-shadow: black 5px 5px 5px;
+  font-size: 30px;
+  color: white;
 }
