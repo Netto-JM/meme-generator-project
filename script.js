@@ -17,7 +17,6 @@ function uploadMemeImage(event) {
   const [imageBlob] = uploadedImage;
   const imageUrl = URL.createObjectURL(imageBlob);
   memeImageContainer.src = imageUrl;
-  /* memeImageContainer.style.border =  */
 }
 
 function getFrame(frameName) {
