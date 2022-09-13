@@ -1,14 +1,14 @@
 const memeContainerEl = document.getElementById('meme-image-container');
-const memeTextContainer = document.getElementById('meme-text');
-const memeImageContainer = document.getElementById('meme-image');
-const memeTextInput = document.getElementById('text-input');
-const memeImageInput = document.getElementById('meme-insert');
+const memeTextContainerEl = document.getElementById('meme-text');
+const memeImageContainerEl = document.getElementById('meme-image');
+const memeTextInputEl = document.getElementById('text-input');
+const memeImageInputEl = document.getElementById('meme-insert');
 const buttonsEl = document.getElementById('buttons');
 const previewImagesEl = document.getElementById('preview-images');
 
 function insertMemeText(event) {
   const memeText = event.target.value;
-  memeTextContainer.textContent = memeText;
+  memeTextContainerEl.textContent = memeText;
   console.log(memeText);
 }
 
@@ -16,7 +16,7 @@ function uploadMemeImage(event) {
   const uploadedImage = event.target.files;
   const [imageBlob] = uploadedImage;
   const imageUrl = URL.createObjectURL(imageBlob);
-  memeImageContainer.src = imageUrl;
+  memeImageContainerEl.src = imageUrl;
 }
 
 function getFrame(frameName) {
@@ -37,12 +37,12 @@ function useMemePreview(event) {
   const clickedWhiteSpace = !clickedImg;
   if (clickedWhiteSpace) return;
   const memePreviewSrc = clickedImg.src.slice(-14);
-  const memePreviousSrc = memeImageContainer.src.slice(-14);
+  const memePreviousSrc = memeImageContainerEl.src.slice(-14);
   if (memePreviewSrc === memePreviousSrc) return;
-  memeImageContainer.src = memePreviewSrc;
+  memeImageContainerEl.src = memePreviewSrc;
 }
 
-memeTextInput.addEventListener('input', insertMemeText);
-memeImageInput.addEventListener('change', uploadMemeImage);
+memeTextInputEl.addEventListener('input', insertMemeText);
+memeImageInputEl.addEventListener('change', uploadMemeImage);
 buttonsEl.addEventListener('click', changeFrame);
 previewImagesEl.addEventListener('click', useMemePreview);
