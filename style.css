@@ -24,17 +24,21 @@ p {
   margin: auto;
   padding: 15px 10px;
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #meme-image {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 #meme-text {
   text-shadow: black 5px 5px 5px;
   font-size: 30px;
   color: white;
+  position: relative;
+  top: -100px;
 }
 
 #fire {
